@@ -36,7 +36,7 @@ const Jobform = () => {
   const deleteSkill = (element) => {
     const newSkills = formData.skills.filter((el) => el !== element);
     setFormData({ ...formData, skills: newSkills });
-    s;
+    
   };
   const submitHandeler = async () => {
     if (
@@ -148,8 +148,8 @@ const Jobform = () => {
                 <option value="" disabled selected>
                   Enter the must have skills
                 </option>
-                {DEFAULT_SKILLs.map((element) => (
-                  <option value={element}>{element}</option>
+                {DEFAULT_SKILLs.map((element,idx) => (
+                  <option key={idx} value={element}>{element}</option>
                 ))}
               </select>
             </div>
@@ -221,7 +221,7 @@ const Jobform = () => {
           </div>
         </div>
         <div className=" inner__container--div ">
-          <div className="formGroup">
+          <div style={{gap:'0'}} className="formGroup">
             <label htmlFor="about" className="label">
               {" "}
               Additional Information
@@ -261,7 +261,7 @@ const Jobform = () => {
             Job description
           </label>
           <textarea
-            style={{ height: "5rem", width: "80%" }}
+            style={{ height: "4rem", width: "80%" }}
             className="input text--none"
             name="description"
             value={formData.description}
@@ -275,7 +275,7 @@ const Jobform = () => {
             About Company
           </label>
           <textarea
-            style={{ height: "5rem", width: "80%" }}
+            style={{ height: "4rem", width: "80%" }}
             className="input text--none"
             name="aboutCompany"
             value={formData.aboutCompany}
