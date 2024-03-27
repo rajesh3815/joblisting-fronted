@@ -1,0 +1,135 @@
+.navbar {
+    background-image: url('../../assets/Rectangle1.png');
+    height: 4.5rem;
+    border-radius: 0 0 2.3rem 2.3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1.5rem;
+}
+
+.navbar button {
+    height: 2.5rem;
+    /* padding: 15px; */
+    width: 6.3rem;
+    font-size: 18px;
+    color: white;
+    box-sizing: border-box;
+    border: 1px solid white;
+    border-radius: 7px;
+    cursor: pointer;
+    letter-spacing: 2px;
+}
+
+.edit--btn {
+    height: 2.5rem;
+    /* padding: 15px; */
+    width: 7.3rem;
+    background-color: #ED5353;
+    font-size: 18px;
+    color: white;
+    box-sizing: border-box;
+    border: 1px solid white;
+    border-radius: 7px;
+    cursor: pointer;
+    letter-spacing: 2px;
+}
+
+.navbar__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3rem;
+}
+
+.navbar__logo {
+    color: white;
+    font-size: 25px;
+    font-weight: 600;
+    cursor: pointer;
+    letter-spacing: 1.2px;
+}
+
+.jobdetails--heading {
+    width: 80vw;
+    height: 3rem;
+    /* border: 1px solid; */
+    margin: auto;
+    padding: 1rem;
+    text-align: center;
+    font-size: 27px;
+    letter-spacing: 2px;
+    font-weight: normal;
+    margin-top: -7px;
+    background-color: white;
+    border-radius: 2rem 2rem 0 0;
+    box-shadow: 0px 4px 23px 2px #0000001A;
+}
+
+.jd__details {
+    width: 82vw;
+    background: white;
+    margin: auto;
+    margin-top: 3rem;
+    border-radius: 0 0 2rem 2rem;
+    display: flex;
+    flex-direction: column;
+    /* align-items: start; */
+    padding: 2rem 3rem;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 23px 2px #0000001A;
+    color: #999999;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+}
+
+.subheading {
+    margin-top: 1rem;
+    margin-bottom: .2rem;
+    color: black;
+    font-weight: 700;
+    font-size: 2.2rem;
+    cursor: pointer;
+}
+
+.jobdetails--location {
+    letter-spacing: 2px;
+    color: #ED5353;
+    margin-bottom: 1.8rem;
+}
+
+.jd__details--wages {
+    display: flex;
+    gap: 3rem;
+}
+
+.wages--div {
+    display: flex;
+    gap: .5rem;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.about--heading {
+    margin-top: 2.3rem;
+    margin-bottom: 1.2rem;
+    color: black;
+    font-weight: 700;
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+
+.skill--span {
+    background-color: #FFEEEE;
+    border-radius: 15px;
+    padding: 4px 15px;
+
+}
+
+.require--skill {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    margin-top: -9px;
+}

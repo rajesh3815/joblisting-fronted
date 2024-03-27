@@ -1,0 +1,8 @@
+.job-post--image{
+  width: 40vw;
+  height: 100vh;
+}
+.container--page{
+    display: flex;
+    justify-content: space-between;
+}

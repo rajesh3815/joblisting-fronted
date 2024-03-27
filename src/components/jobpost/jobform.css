@@ -1,0 +1,184 @@
+.container {
+    box-sizing: border-box;
+    width: 65vw;
+    padding: 0vh 2vw;
+    position: relative;
+    height: 100vh;
+}
+
+.inner__container {
+    width: 100%;
+
+}
+
+.skill__container {
+    width: 48%;
+}
+
+.inner__container--div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.text--none {
+    border: none;
+    overflow: auto;
+    outline: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    resize: none;
+}
+
+.input {
+    border-radius: 6px;
+    width: 70%;
+    padding: 0.5em 0.2em;
+    height: 1.1rem;
+    font-family: sans-serif;
+    color: #7b7b7b;
+    border: 2px solid #c2c2c2;
+    background-color: #FFFFFF;
+}
+
+.formGroup {
+    display: flex;
+    width: 48%;
+    gap: 1rem;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1rem;
+    margin: 0.8rem 0;
+
+}
+
+.label {
+    font-family: sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.selectGroup {
+    font-size: 1rem;
+    /* width: 48%; */
+    gap: 4rem;
+    margin: 1rem 0;
+    display: flex;
+}
+
+.select {
+    width: 18rem;
+    height: 2rem;
+    border: 2px solid #c2c2c2;
+}
+
+.select {
+    border-radius: 6px;
+    padding: 0em 0.2em;
+    height: 2rem;
+    border: 2px solid #c2c2c2;
+    color: #adadad;
+    background-color: #FFFFFF;
+    /* position: absolute; */
+    left: 21vw;
+}
+
+.skillsdiv {
+    margin-left: 7rem;
+    width: 74%;
+    /* height: 1.7rem; */
+    /* border: 1px solid; */
+    overflow: auto;
+}
+
+.formGroup--full {
+    display: flex;
+    /* width: 113%; */
+    gap: 1rem;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1rem;
+    margin: 0.8rem 0;
+}
+
+.skillsdiv__inner {
+    /* position: absolute; */
+    display: flex;
+    left: 10rem;
+    overflow: auto;
+    /* width: 60%; */
+}
+
+.skill>button {
+    height: 1.3rem;
+    width: 1.5rem;
+    /* size: 17px; */
+    font-size: 18px;
+    /* display: flex; */
+    color: white;
+    background: #ED5353;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.skill {
+    height: 1.3rem;
+    background-color: #fde7e7;
+    width: max-content;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 5px;
+    margin-right: 1rem;
+}
+
+.skill>p {
+    padding: 0 9px;
+    font-family: sans-serif;
+}
+
+.form--btns {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 1rem;
+}
+
+.btn--cancel {
+    font-size: 20px;
+    color: #C2C2C2;
+    cursor: pointer;
+    border: none;
+    border-radius: 7px;
+    padding: .5rem 2rem;
+}
+
+.btn--add {
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+    border: none;
+    border-radius: 7px;
+    padding: .5rem 2rem;
+    background-color: #ED5353;
+}
+
+.heading p {
+    margin-top: 1rem;
+    font-weight: bold;
+    font-size: 2.3rem;
+    margin-bottom: 1.2rem;
+}
+
+.skillGroup {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0.5rem 0px;
+}
