@@ -27,10 +27,10 @@ export const signinAuth = async ({ email, password }) => {
         password,
       }
     );
-    localStorage.setItem("token",response.data.token)
-    alert(response.data.message+'👌');
+    // console.log(response.data);
+    localStorage.setItem("token", response.data.token);
   } catch (error) {
-    console.error("Error occurred during signup:", error);
-    
+    // console.log("Error occurred during signup:", error);
+    return error.response.status
   }
 };

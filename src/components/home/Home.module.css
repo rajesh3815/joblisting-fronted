@@ -36,6 +36,20 @@
     letter-spacing: 2px;
 }
 
+.navbar button {
+    transition: all 0.4s;
+}
+
+.navbar button:hover {
+    box-shadow: 0px 15px 25px -5px rgba(0, 0, 0, 0.2);
+    border-color: #ED5353;
+    transform: scale(1.1);
+}
+
+/* .navbar button:active {
+    box-shadow: 0px 4px 8px rgba(darken(rgb(255, 146, 106), 30%));
+    transform: scale(0.98);
+  } */
 .skillGroup {
     display: flex;
     align-items: center;
@@ -91,12 +105,17 @@
 
 .jobSearchDiv {
     box-shadow: 0px 0px 22px 4px #FF202040;
-    width: 80vw;
+    width: 82vw;
     padding: 1rem 1.5rem;
     margin: auto;
     margin-top: 3rem;
     height: 9rem;
     border-radius: 5px;
+    position: sticky;
+    top: 0;
+    opacity: 0.95;
+    background-color: white;
+    z-index: 100;
 }
 
 .searchInput {
@@ -149,7 +168,15 @@
     cursor: pointer;
     letter-spacing: 2px;
     background-color: #ED5353;
-    ;
+    transition: all 0.3s;
+}
+.filterBtn:hover{
+    background-color: #f41c1c;
+}
+.filterBtn:active {
+    transform: scale(0.98);
+    /* Scaling button to 0.98 to its original size */
+    box-shadow: 3px 2px 22px 1px rgb(246, 189, 189);
 }
 
 .clear {
@@ -236,3 +263,12 @@
     gap: 2rem;
 
 }
+
+
+/* .cn {
+    box-shadow: inset 20px 20px 20px rgba(0, 0, 0, .05),
+        25px 30px 30px rgba(0, 0, 0, .05),
+        inset -20px -20px 25px rgba(255, 255, 255, 0.9);
+    border-radius: 31% 69% 23% 77% / 66% 18% 82% 34%;
+    transition: 0.3s all;
+} */

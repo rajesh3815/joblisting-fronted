@@ -23,6 +23,7 @@ const SingnupPage = () => {
       return;
     }
      signupAuth(formData);
+     nav('/login')
   };
   const handleInputChange = (event) => {
     event.preventDefault();
@@ -35,7 +36,7 @@ const SingnupPage = () => {
   };
   return (
     <div className="containerSignup">
-      <div className="form-container">
+      <div className="form-containerSignup">
         <div className="innerform">
           <h1 className="head">Create an account</h1>
           <p style={{ marginTop: "7px", marginBottom: "1rem" }}>
@@ -109,6 +110,7 @@ const SingnupPage = () => {
               Sign In
             </span>
           </p>
+          <button className={"btnHome"} style={{}} onClick={()=>nav('/')}>Home</button>
         </div>
       </div>
 

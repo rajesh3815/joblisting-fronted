@@ -3,6 +3,8 @@ import "./jobform.css";
 import { DEFAULT_SKILLs } from "../../utils/Constants";
 import { editJobDetails, jobpost } from "../../api/Jobpoast";
 import { useLocation, useNavigate } from "react-router-dom";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 const Jobform = () => {
   const { state } = useLocation();
   const nav = useNavigate();
@@ -36,7 +38,6 @@ const Jobform = () => {
   const deleteSkill = (element) => {
     const newSkills = formData.skills.filter((el) => el !== element);
     setFormData({ ...formData, skills: newSkills });
-    
   };
   const submitHandeler = async () => {
     if (
@@ -53,7 +54,7 @@ const Jobform = () => {
       !formData.aboutCompany ||
       !formData.additionalInfo
     ) {
-      alert("all field are required!");
+      toast("all field are required!");
       return;
     }
     if (state?.flagEdit) {
@@ -62,6 +63,9 @@ const Jobform = () => {
       return;
     }
     await jobpost(formData);
+  };
+  const hadelCancel = () => {
+    nav("/");
   };
   return (
     <div className="container">
@@ -148,8 +152,10 @@ const Jobform = () => {
                 <option value="" disabled selected>
                   Enter the must have skills
                 </option>
-                {DEFAULT_SKILLs.map((element,idx) => (
-                  <option key={idx} value={element}>{element}</option>
+                {DEFAULT_SKILLs.map((element, idx) => (
+                  <option key={idx} value={element}>
+                    {element}
+                  </option>
                 ))}
               </select>
             </div>
@@ -221,7 +227,7 @@ const Jobform = () => {
           </div>
         </div>
         <div className=" inner__container--div ">
-          <div style={{gap:'0'}} className="formGroup">
+          <div style={{ gap: "0" }} className="formGroup">
             <label htmlFor="about" className="label">
               {" "}
               Additional Information
@@ -286,12 +292,15 @@ const Jobform = () => {
 
         <div className="form--btns">
           {" "}
-          <button className="btn--cancel">Cancel</button>{" "}
+          <button className="btn--cancel" onClick={hadelCancel}>
+            Cancel
+          </button>{" "}
           <button className="btn--add" onClick={submitHandeler}>
             {state?.flagEdit ? "Edit Job" : "+Add job"}
           </button>
         </div>
       </div>
+      <ToastContainer />
     </div>
   );
 };

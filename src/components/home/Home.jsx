@@ -6,7 +6,8 @@ import { useNavigate } from "react-router-dom";
 import { FcSearch } from "react-icons/fc";
 import { FaPeopleCarry } from "react-icons/fa";
 import logo from "../../assets/emojione-v1_flag-for-india.svg";
-
+import { ToastContainer, toast, Bounce } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 const Home = () => {
   const [allJob, setAlljob] = useState({});
   const [skills, setSkills] = useState([]);
@@ -31,26 +32,48 @@ const Home = () => {
   };
   const deleteSkill = (element) => {
     const newSkills = skills.filter((el) => el !== element);
-    setSkills([...newSkills]);
+    setSkills(() => [...newSkills]);
   };
   const filterApply = async () => {
     const jobs = await getAlljobs(title, skills);
-    setAlljob([...jobs.data]);
+    setAlljob(() => [...jobs.data]);
+    toast.success("👏Applied Successfully", {
+      position: "top-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "colored",
+      transition: Bounce,
+    });
   };
   const clearJob = () => {
     setSkills(() => []);
     setTitle("");
     getJobs();
+    toast.success("👏Cleared Successfully", {
+      position: "top-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "colored",
+      transition: Bounce,
+    });
   };
   const getJobs = async () => {
     const response = await getAlljobs(title, skills);
-    setAlljob([...response.data]);
+    setAlljob(() => [...response.data]);
     //  setAlljob(response.data)
-    console.log(allJob.length);
+    // console.log(allJob.length);
   };
-  const handelAddjob=()=>{
-    nav('/job-post')
-  }
+  const handelAddjob = () => {
+    nav("/job-post");
+  };
 
   return (
     <>
@@ -75,9 +98,9 @@ const Home = () => {
               </>
             ) : (
               <>
-              <button
+                <button
                   onClick={handelAddjob}
-                  style={{ backgroundColor: "#ff1818",marginLeft:"10px" }}
+                  style={{ backgroundColor: "#ff1818", marginLeft: "10px" }}
                 >
                   +Addjob
                 </button>
@@ -87,8 +110,6 @@ const Home = () => {
                 >
                   Logout
                 </button>
-
-                
               </>
             )}
           </div>
@@ -220,6 +241,7 @@ const Home = () => {
               </div>
             );
           })}
+        <ToastContainer />
       </div>
     </>
   );

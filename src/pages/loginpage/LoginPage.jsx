@@ -3,6 +3,8 @@ import "./login.css";
 import heroimage from "../../assets/heroimage.png";
 import { useNavigate } from "react-router-dom";
 import { signinAuth } from "../../auth/auth";
+import { ToastContainer, toast,Bounce } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 const LoginPage = () => {
   const nav = useNavigate();
   const [formData, setformData] = useState({
@@ -16,8 +18,35 @@ const LoginPage = () => {
       alert("empty field");
       return;
     }
-    await signinAuth(formData);
-    nav("/")
+    const datas = await signinAuth(formData);
+    if (datas === 400) {
+      toast.error("🔑 Wrong password!", {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "colored",
+        transition: Bounce,
+      });
+      return;
+    } else if (datas === 500) {
+      toast.error("✉️ Wrong Email!", {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "colored",
+        transition: Bounce,
+      });
+      return;
+    }
+    nav("/");
   };
   const handleInputChange = (event) => {
     event.preventDefault();
@@ -31,7 +60,7 @@ const LoginPage = () => {
   return (
     <div className="containerLogin">
       <div className="form-container">
-        <div className="innerform">
+        <div className="innerformLogin">
           <h1 className="head">Create an account</h1>
           <p style={{ marginTop: "7px", marginBottom: "1rem" }}>
             Your personal job finder is here
@@ -82,10 +111,14 @@ const LoginPage = () => {
               Sign up
             </span>
           </p>
+          <button className={"btnHome"} style={{}} onClick={() => nav("/")}>
+            Home
+          </button>
         </div>
       </div>
 
       <img className="heroImage" src={heroimage} alt="image" />
+      <ToastContainer />
     </div>
   );
 };
