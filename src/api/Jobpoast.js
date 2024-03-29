@@ -4,7 +4,7 @@ export const jobpost = async (job) => {
     const token = localStorage.getItem("token");
     axios.defaults.headers.common["Authorization"] = token;
     const response = await axios.post(
-      "http://localhost:4000/api/v1/jobs/create",
+      "https://joblisting-backend-6wnx.onrender.com/api/v1/jobs/create",
       job
     );
 
@@ -19,7 +19,7 @@ export const jobpostDetails = async (jobid) => {
   axios.defaults.headers.common["Authorization"] = token;
   try {
     const response = await axios.get(
-      `http://localhost:4000/api/v1/jobs/job-details/${jobid}`
+      `https://joblisting-backend-6wnx.onrender.com/api/v1/jobs/job-details/${jobid}`
     );
 
     return response.data;
@@ -33,7 +33,7 @@ export const editJobDetails = async (jobid, reqBody) => {
   axios.defaults.headers.common["Authorization"] = token;
   try {
     const response = await axios.put(
-      `http://localhost:4000/api/v1/jobs/update/${jobid}`,
+      `https://joblisting-backend-6wnx.onrender.com/api/v1/jobs/update/${jobid}`,
       reqBody
     );
 
@@ -46,7 +46,7 @@ export const editJobDetails = async (jobid, reqBody) => {
 export const getAlljobs = async (title, skill) => {
   try {
     const response = await axios.get(
-      `http://localhost:4000/api/v1/jobs/all?title=${
+      `https://joblisting-backend-6wnx.onrender.com/api/v1/jobs/all?title=${
         title ? title : ""
       }&skills=${skill ? skill : ""}`
     );

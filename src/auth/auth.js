@@ -3,7 +3,7 @@ import axios from "axios";
 export const signupAuth = async ({ name, email, password, phone }) => {
   try {
     const response = await axios.post(
-      "http://localhost:4000/api/v1/auth/register/",
+      "https://joblisting-backend-6wnx.onrender.com/api/v1/auth/register/",
       {
         name,
         email,
@@ -21,7 +21,7 @@ export const signupAuth = async ({ name, email, password, phone }) => {
 export const signinAuth = async ({ email, password }) => {
   try {
     const response = await axios.post(
-      "http://localhost:4000/api/v1/auth/login/",
+      "https://joblisting-backend-6wnx.onrender.com/api/v1/auth/login/",
       {
         email,
         password,
