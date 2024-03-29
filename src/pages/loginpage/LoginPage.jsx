@@ -15,7 +15,17 @@ const LoginPage = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     if (!formData.email || !formData.password) {
-      alert("empty field");
+      toast.warn("All fields are required", {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "colored",
+        transition: Bounce,
+      });
       return;
     }
     const datas = await signinAuth(formData);
