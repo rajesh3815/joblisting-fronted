@@ -68,7 +68,8 @@ input {
 .heroImage {
     width: 40vw;
     height: 100vh;
-
+    postion:absolute;
+    right:0
 }
 
 .containerSignup {
