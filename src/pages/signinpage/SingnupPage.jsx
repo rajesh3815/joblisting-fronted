@@ -3,6 +3,8 @@ import "./signup.css";
 import heroimage from "../../assets/heroimage.png";
 import { useNavigate } from "react-router-dom";
 import { signupAuth } from "../../auth/auth";
+import { ToastContainer, toast,Bounce } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 const SingnupPage = () => {
   const nav = useNavigate();
   const [formData, setformData] = useState({
@@ -125,6 +127,7 @@ const SingnupPage = () => {
       </div>
 
       <img className="heroImage" src={heroimage} alt="image" />
+      <ToastContainer />
     </div>
   );
 };
