@@ -3,7 +3,7 @@ import "./jobform.css";
 import { DEFAULT_SKILLs } from "../../utils/Constants";
 import { editJobDetails, jobpost } from "../../api/Jobpoast";
 import { useLocation, useNavigate } from "react-router-dom";
-import { ToastContainer, toast } from "react-toastify";
+import { ToastContainer, toast, Bounce } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 const Jobform = () => {
   const { state } = useLocation();
@@ -54,7 +54,17 @@ const Jobform = () => {
       !formData.aboutCompany ||
       !formData.additionalInfo
     ) {
-      toast("all field are required!");
+      toast.warn(' All fields are required!', {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+        transition: Bounce,
+        });
       return;
     }
     if (state?.flagEdit) {
