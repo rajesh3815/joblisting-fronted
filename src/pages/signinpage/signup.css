@@ -69,11 +69,12 @@ input {
 .heroImage {
     width: 40vw;
     height: 100vh;
-    position:absolute;
-    right:0
+    position: absolute;
+    right: 0;
 }
 
 .containerSignup {
+    height: 100vh;
     display: flex;
     justify-content: space-between;
     background-color: #dfdfdf;
