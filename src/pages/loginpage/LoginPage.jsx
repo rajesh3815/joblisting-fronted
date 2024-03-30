@@ -11,6 +11,7 @@ const LoginPage = () => {
     email: "",
     password: "",
   });
+  const [name,setName]=useState("")
 
   const handleSubmit = async (event) => {
     event.preventDefault();

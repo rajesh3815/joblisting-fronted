@@ -68,6 +68,7 @@ const Home = () => {
   const getJobs = async () => {
     const response = await getAlljobs(title, skills);
     setAlljob(() => [...response.data]);
+    console.log(allJob?.userName);
     //  setAlljob(response.data)
     // console.log(allJob.length);
   };
@@ -112,6 +113,8 @@ const Home = () => {
                 </button>
               </>
             )}
+            {/* {allJob?.userName} */}
+            
           </div>
         </nav>
       </nav>

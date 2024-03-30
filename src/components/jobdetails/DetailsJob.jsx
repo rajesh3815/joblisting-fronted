@@ -17,6 +17,7 @@ const DetailsJob = () => {
   const fetchDetails = async () => {
     if (!id) return;
     const data = await jobpostDetails(id);
+    // console.log(jobdetails?.userName.split(" ")[0]);
 
     setJobdetails({ ...data.data, isEditable: data.flag });
   };
@@ -31,6 +32,9 @@ const DetailsJob = () => {
       <>
         <nav className="navbar">
           <p className="navbar__logo">Jobfinder</p>
+          <div className="job_name" style={{  fontWeight: "bold",fontSize:"19px" }}>
+            {jobdetails?.isEditable ? `  Hi ,${jobdetails?.userName.split(" ")[0]} check your job` : ""}
+          </div>
           <div className="navbar__inner">
             {!isLogedin ? (
               <>
