@@ -54,7 +54,6 @@ const Jobform = () => {
       !formData.aboutCompany ||
       !formData.additionalInfo
     ) {
-      console.log(formData);
       toast.warn(" All fields are required!", {
         position: "top-right",
         autoClose: 5000,
@@ -93,7 +92,7 @@ const Jobform = () => {
     <div className="container">
       <div className="inner__container">
         <div className="heading">
-          <p>Add job description</p>
+          <p>Add job Description</p>
         </div>
         <div className="inner__container--div">
           <div className="formGroup">
