@@ -17,6 +17,9 @@ const Home = () => {
   useEffect(() => {
     getJobs();
   }, [title, skills]);
+  useEffect(() => {
+    getJobs();
+  }, []);
   const handelLogout = () => {
     localStorage.clear("token");
     nav("/login");
@@ -114,7 +117,6 @@ const Home = () => {
               </>
             )}
             {/* {allJob?.userName} */}
-            
           </div>
         </nav>
       </nav>
@@ -202,9 +204,7 @@ const Home = () => {
                       </div>
                     </div>
                   </div>
-                  <p className={Styles.spnlocation}
-                    
-                  >
+                  <p className={Styles.spnlocation}>
                     <span>{job?.locationType}</span> &nbsp; &nbsp; &nbsp; &nbsp;
                     <span>{job?.jobType}</span>
                   </p>

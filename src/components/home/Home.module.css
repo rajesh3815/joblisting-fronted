@@ -97,6 +97,9 @@
     color: #7b7b7b;
     border: 2px solid #c2c2c2;
     background-color: #FFFFFF;
+    text-overflow: ellipsis;
+    width: 6rem;
+
 }
 
 .jobSearchDiv {
