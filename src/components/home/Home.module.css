@@ -46,10 +46,6 @@
     transform: scale(1.1);
 }
 
-/* .navbar button:active {
-    box-shadow: 0px 4px 8px rgba(darken(rgb(255, 146, 106), 30%));
-    transform: scale(0.98);
-  } */
 .skillGroup {
     display: flex;
     align-items: center;
@@ -62,7 +58,7 @@
 .skillChip {
 
     height: 2rem;
-    background-color: #fde7e7;
+    background-color: #f9c5c5;
     width: max-content;
     display: flex;
     align-items: center;
@@ -170,9 +166,29 @@
     background-color: #ED5353;
     transition: all 0.3s;
 }
-.filterBtn:hover{
+
+.viewDetailsBtn {
+    height: 2.5rem;
+    padding: 9px 12px;
+    font-size: 18px;
+    color: white;
+    box-sizing: border-box;
+    border: 1px solid white;
+    border-radius: 7px;
+    cursor: pointer;
+    letter-spacing: 2px;
+    background-color: #ED5353;
+    transition: all 0.3s;
+}
+
+.viewDetailsBtn:hover {
     background-color: #f41c1c;
 }
+
+.filterBtn:hover {
+    background-color: #f41c1c;
+}
+
 .filterBtn:active {
     transform: scale(0.98);
     /* Scaling button to 0.98 to its original size */
@@ -215,6 +231,7 @@
     width: 91%;
     height: 7rem;
     margin: auto;
+    background-color: rgb(250, 240, 240);
     padding: 1.5rem 1.5rem;
     box-shadow: 0px 0px 22px 2px #FF202040;
     border-left: 5px solid #ED5353;
@@ -247,6 +264,7 @@
     display: flex;
     align-items: center;
     gap: 1rem;
+
     color: gray;
     letter-spacing: 1px;
 }
@@ -264,11 +282,129 @@
 
 }
 
+.jobsallary {
+    display: flex;
+    align-items: center;
+}
 
-/* .cn {
-    box-shadow: inset 20px 20px 20px rgba(0, 0, 0, .05),
-        25px 30px 30px rgba(0, 0, 0, .05),
-        inset -20px -20px 25px rgba(255, 255, 255, 0.9);
-    border-radius: 31% 69% 23% 77% / 66% 18% 82% 34%;
-    transition: 0.3s all;
-} */
+.joblocation {
+    margin-left: 1.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.spnlocation {
+    margin-left: 5.5rem;
+    color: #ED5353;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* ------------//////////////////////////////////////mediaquery started from here //////////////////////////////////////////////----------- */
+@media only screen and (max-width: 767px) {
+
+    .joblocation {
+        margin-left: 0;
+
+    }
+
+    .navbar button {
+        width: 4.5rem;
+        height: 2.1rem;
+        font-size: 15px;
+        padding: 0;
+    }
+
+    .jobTitle {
+        position: absolute;
+        top: 1.3rem;
+        left: 7rem;
+    }
+
+    .detailChip {
+        margin-top: .5rem;
+        font-size: 1rem;
+        justify-content: space-between;
+        gap: 4px
+    }
+
+    .navbar__inner {
+        gap: 1rem
+    }
+
+    .jobSearchDivFooter {
+        display: block;
+        width: 100%;
+        position: relative;
+    }
+
+    .jobSearchDiv {
+        height: 10rem;
+    }
+
+    .skillGroup {
+        display: block;
+        width: 100%;
+    }
+
+    .skills {
+        width: 100%;
+    }
+
+    .select {
+        height: 2.3rem;
+    }
+
+    .filterBtn {
+        position: absolute;
+        font-size: 14px;
+        right: 5rem;
+        bottom: 2.6rem;
+        padding: 3px;
+        height: 2.3rem;
+    }
+
+    .clear {
+        position: absolute;
+        top: .5rem;
+        right: .5rem;
+    }
+
+    .container {
+        height: max-content;
+        display: inline;
+    }
+
+    .containerLeftHead {
+        display: inline;
+        position: relative;
+    }
+
+    .containerLeft {
+        gap: 1rem;
+    }
+
+    .spnlocation {
+        margin-left: 0px;
+    }
+    .containerRight{
+        margin-top: 1rem;
+        width: 91%;
+        align-items: center;
+    }
+    .skillDetail{
+        width: 100%;
+        overflow: auto;
+    }
+    .viewDetailsBtn{
+        width: 15rem;
+    }
+    .container{
+        margin: 0;
+        width:90%;
+        border-radius: 65px 9px 8px 65px;
+    }
+    .allJobs{
+        margin-top: 3rem;
+    }
+}

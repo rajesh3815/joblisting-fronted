@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./login.css";
+import Styles from './login.module.css'
 import heroimage from "../../assets/heroimage.png";
 import { useNavigate } from "react-router-dom";
 import { signinAuth } from "../../auth/auth";
@@ -68,20 +68,20 @@ const LoginPage = () => {
     }));
   };
   return (
-    <div className="containerLogin">
-      <div className="form-container">
-        <div className="innerformLogin">
-          <h1 className="head">Create an account</h1>
+    <div  className={Styles.containerLogin}>
+      <div className={Styles.formContainer}>
+        <div className={Styles.innerformLogin}>
+          <h1 className={Styles.head}>Create an account</h1>
           <p style={{ marginTop: "7px", marginBottom: "1rem" }}>
             Your personal job finder is here
           </p>
-          <form className="forms">
+          <form className={Styles.forms}>
             {/* {!values.firstName && (
         <span id="first-name-error">Please enter a first name</span>
       )} */}
 
             <input
-              className="form-field"
+              className={Styles.formField}
               type="email"
               placeholder="Email"
               name="email"
@@ -90,7 +90,7 @@ const LoginPage = () => {
             />
 
             <input
-              className="form-field"
+              className={Styles.formField}
               type="password"
               placeholder="password"
               name="password"
@@ -101,14 +101,14 @@ const LoginPage = () => {
 
           <button
             onClick={handleSubmit}
-            className="button-82-pushable"
+            className={Styles.button82pushable}
             role="button"
           >
-            <span className="button-82-shadow"></span>
-            <span className="button-82-edge"></span>
-            <span className="button-82-front text">Sign in</span>
+            <span className={Styles.button82shadow}></span>
+            <span className={Styles.button82edge}></span>
+            <span className={`${Styles.button82front} ${Styles.text}`}>Sign in</span>
           </button>
-          <p style={{ marginTop: "1rem" }}>
+          <p className={Styles.dontHave} >
             Don't have an account?{" "}
             <span
               onClick={() => nav("/signup")}
@@ -121,13 +121,13 @@ const LoginPage = () => {
               Sign up
             </span>
           </p>
-          <button className={"btnHome"} style={{}} onClick={() => nav("/")}>
+          <button className={Styles.btnHome}  onClick={() => nav("/")}>
             Home
           </button>
         </div>
       </div>
 
-      <img className="heroImage" src={heroimage} alt="image" />
+      <img className={Styles.heroImage} src={heroimage} alt="image" />
       <ToastContainer />
     </div>
   );
