@@ -54,7 +54,8 @@ const Jobform = () => {
       !formData.aboutCompany ||
       !formData.additionalInfo
     ) {
-      toast.warn(' All fields are required!', {
+      console.log(formData);
+      toast.warn(" All fields are required!", {
         position: "top-right",
         autoClose: 5000,
         hideProgressBar: false,
@@ -64,7 +65,7 @@ const Jobform = () => {
         progress: undefined,
         theme: "dark",
         transition: Bounce,
-        });
+      });
       return;
     }
     if (state?.flagEdit) {
@@ -73,6 +74,17 @@ const Jobform = () => {
       return;
     }
     await jobpost(formData);
+    toast.success("Job post created successfully!", {
+      position: "top-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "color",
+      transition: Bounce,
+    });
   };
   const hadelCancel = () => {
     nav("/");
@@ -228,11 +240,11 @@ const Jobform = () => {
               className="select"
               onChange={handelChange}
             >
-              <option value="" disabled defaultValue="workType">
+              <option value="" disabled selected>
                 locationType
               </option>
               <option value="Remote">Remote</option>
-              <option value="OffLine">Offline</option>
+              <option value="Office">Office</option>
             </select>
           </div>
         </div>
@@ -262,11 +274,11 @@ const Jobform = () => {
               className="select"
               onChange={handelChange}
             >
-              <option value="" disabled defaultValue="Select job Type">
+              <option value="" disabled selected>
                 Select job Type
               </option>
               <option value="FullTime">FullTime</option>
-              <option value=" Internship">Internship</option>
+              <option value="Internship">Internship</option>
               <option value="PartTime">PartTime</option>
             </select>
           </div>

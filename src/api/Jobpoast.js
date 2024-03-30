@@ -8,7 +8,6 @@ export const jobpost = async (job) => {
       job
     );
 
-    alert(response.data.message);
   } catch (error) {
     console.error("Error occurred ", error);
   }
