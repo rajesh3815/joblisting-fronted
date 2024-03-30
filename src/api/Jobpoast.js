@@ -7,7 +7,6 @@ export const jobpost = async (job) => {
       "https://joblisting-backend-6wnx.onrender.com/api/v1/jobs/create",
       job
     );
-
   } catch (error) {
     console.error("Error occurred ", error);
   }

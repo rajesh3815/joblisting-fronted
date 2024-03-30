@@ -54,7 +54,6 @@ const Jobform = () => {
       !formData.aboutCompany ||
       !formData.additionalInfo
     ) {
-      console.log(formData);
       toast.warn(" All fields are required!", {
         position: "top-right",
         autoClose: 5000,
