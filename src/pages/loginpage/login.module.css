@@ -21,6 +21,7 @@ body {
 }
 
 .innerformLogin {
+    background-color: #ffd8d8;
     display: flex;
     align-items: flex-start;
     justify-content: center;
@@ -76,7 +77,7 @@ input {
 .containerLogin {
     display: flex;
     justify-content: space-between;
-    background-color: #dfdfdf;
+    background-color: #e2e1e1;
 }
 
 .btnHome {
@@ -241,7 +242,7 @@ input {
     }
 
     .formField {
-        width: 15rem;
+        width: 14rem;
     }
 
     .btnHome {

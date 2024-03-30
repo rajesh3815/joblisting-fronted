@@ -26,6 +26,7 @@ body {
     justify-content: center;
     flex-direction: column;
     margin-left: 2rem;
+    background-color: #ffd8d8;
     position: relative;
 }
 
@@ -116,7 +117,7 @@ input {
     }
 
     .form-field {
-        width: 14.5rem;
+        width: 14rem;
         margin: 4px 0 9px 0;
     }
 
