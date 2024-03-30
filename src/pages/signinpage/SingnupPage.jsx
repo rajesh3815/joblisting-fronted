@@ -109,7 +109,7 @@ const SingnupPage = () => {
             <span className="button-82-edge"></span>
             <span className="button-82-front text">Sign Up</span>
           </button>
-          <p style={{ marginTop: "1rem" }}>
+          <p className="dontHave">
             Already have an account?{" "}
             <span
               onClick={() => nav("/login")}

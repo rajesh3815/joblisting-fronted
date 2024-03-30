@@ -176,8 +176,8 @@ const Home = () => {
                   <div className={Styles.containerLeftHead}>
                     <img
                       style={{
-                        height: "50px",
-                        width: "60px",
+                        height: "65px",
+                        width: "85px",
                         borderRadius: "10px",
                         boxShadow:
                           " rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px",
@@ -191,27 +191,16 @@ const Home = () => {
                         <p>
                           <FaPeopleCarry /> 100-200
                         </p>
-                        <p>💵{job.sallary}</p>
-                        <p
-                          style={{
-                            marginLeft: "1.5rem",
-                            display: "flex",
-                            alignItems: "center",
-                          }}
-                        >
+                        <p className={Styles.jobsallary}>💵{job.sallary}</p>
+                        <p className={Styles.joblocation}>
                           {" "}
                           <img src={logo} alt="" /> &nbsp; {job?.location}
                         </p>
                       </div>
                     </div>
                   </div>
-                  <p
-                    style={{
-                      marginLeft: "5.5rem",
-                      color: "#ED5353",
-                      fontWeight: "bold",
-                      letterSpacing: "1px",
-                    }}
+                  <p className={Styles.spnlocation}
+                    
                   >
                     <span>{job?.locationType}</span> &nbsp; &nbsp; &nbsp; &nbsp;
                     <span>{job?.jobType}</span>
@@ -233,7 +222,7 @@ const Home = () => {
                   </div>
                   <button
                     onClick={() => nav(`/job-details/${job._id}`)}
-                    className={Styles.filterBtn}
+                    className={Styles.viewDetailsBtn}
                   >
                     View details
                   </button>

@@ -74,6 +74,84 @@ input {
 .containerSignup {
     display: flex;
     justify-content: space-between;
+    background-color: #dfdfdf;
+}
+.dontHave{
+    margin-top: 1rem;
+}
+.btnHome{
+    position: absolute;
+    bottom: 1.5rem;
+    right: 4rem;
+    font-family: Roboto, sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    color: #ffffff;
+    background: linear-gradient(87deg, #f9c5c5 0%, #ff0000 100%);
+    padding: 10px 30px;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px;
+    border-radius: 22px 39px 0px 37px;
+    transition: 1000ms;
+    transform: translateY(0);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+}
+/* ------------//////////////////////////////////////mediaquery started from here //////////////////////////////////////////////----------- */
+@media only screen and (max-width: 767px) {
+    .head {
+        font-size: 23px;
+    }
+
+    .containerLogin {
+        height: 100vh;
+        width: 100vw;
+    }
+
+    .form-container {
+        width: 76vw;
+        margin: auto;
+    }
+
+    .form-field {
+        width: 14.5rem;
+        margin: 4px 0 9px 0;
+    }
+
+    .btnHome {
+        bottom: 1rem;
+        right: 2rem;
+    }
+    .heroImage{
+        display: none;
+    }
+    .button-82-pushable{
+        margin-top: 1rem;
+    }
+
+
+   .containerSignup{
+    width: 100vw;
+    height: 100vh;
+   }
+   .form-containerSignup{
+    height: max-content;
+    width: 78vw;
+   }
+   .innerform{
+    margin-left: 0;
+    margin: auto;
+    height: 78%;
+    width: 59vw;
+    justify-content: unset;
+   }
+   .dontHave{
+    margin-top: 0.5rem;
+    font-size: 14px;
+   }
+
 }
 
 

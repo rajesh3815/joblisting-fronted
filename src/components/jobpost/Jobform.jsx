@@ -277,7 +277,7 @@ const Jobform = () => {
             Job description
           </label>
           <textarea
-            style={{ height: "4rem", width: "80%" }}
+            style={{ height: "4rem", width: "98%" }}
             className="input text--none"
             name="description"
             value={formData.description}
@@ -291,7 +291,7 @@ const Jobform = () => {
             About Company
           </label>
           <textarea
-            style={{ height: "4rem", width: "80%" }}
+            style={{ height: "4rem", width: "98%" }}
             className="input text--none"
             name="aboutCompany"
             value={formData.aboutCompany}

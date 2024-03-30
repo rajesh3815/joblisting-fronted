@@ -1,5 +1,5 @@
 body {
-
+   /* background-color: rgb(219, 208, 208); */
 
     min-height: 100vh;
 
@@ -10,7 +10,7 @@ body {
     flex-direction: column;
 }
 
-.form-container {
+.formContainer {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -48,7 +48,7 @@ body {
 }
 
 
-.form-field {
+.formField {
     width: 30rem;
     margin: 20px 0 10px 0;
     padding: 15px;
@@ -76,6 +76,7 @@ input {
 .containerLogin {
     display: flex;
     justify-content: space-between;
+    background-color: #dfdfdf;
 }
 
 .btnHome {
@@ -116,7 +117,7 @@ input {
 
 
 /* code for button -------------------------------------------- start*/
-.button-82-pushable {
+.button82pushable {
     position: relative;
     border: none;
     background: transparent;
@@ -130,7 +131,7 @@ input {
     margin-top: 2rem;
 }
 
-.button-82-shadow {
+.button82shadow {
     position: absolute;
     top: 0;
     left: 0;
@@ -144,7 +145,7 @@ input {
         transform 600ms cubic-bezier(.3, .7, .4, 1);
 }
 
-.button-82-edge {
+.button82edge {
     position: absolute;
     top: 0;
     left: 0;
@@ -158,7 +159,7 @@ input {
             hsl(340deg 100% 16%) 100%);
 }
 
-.button-82-front {
+.button82front {
     display: block;
     position: relative;
     padding: 12px 27px;
@@ -179,35 +180,79 @@ input {
     }
 }
 
-.button-82-pushable:hover {
+.button82pushable:hover {
     filter: brightness(110%);
     -webkit-filter: brightness(110%);
 }
 
-.button-82-pushable:hover .button-82-front {
+.button82pushable:hover .button82front {
     transform: translateY(-6px);
     transition:
         transform 250ms cubic-bezier(.3, .7, .4, 1.5);
 }
 
-.button-82-pushable:active .button-82-front {
+.button82pushable:active .button82front {
     transform: translateY(-2px);
     transition: transform 34ms;
 }
 
-.button-82-pushable:hover .button-82-shadow {
+.button82pushable:hover .button82shadow {
     transform: translateY(4px);
     transition:
         transform 250ms cubic-bezier(.3, .7, .4, 1.5);
 }
 
-.button-82-pushable:active .button-82-shadow {
+.button82pushable:active .button82shadow {
     transform: translateY(1px);
     transition: transform 34ms;
 }
 
-.button-82-pushable:focus:not(:focus-visible) {
+.button82pushable:focus:not(:focus-visible) {
     outline: none;
 }
 
 /* code for button ------------------------------------------------ end */
+
+
+.dontHave{
+    margin-top: 1rem;
+}
+
+
+/* ------------//////////////////////////////////////mediaquery started from here //////////////////////////////////////////////----------- */
+@media only screen and (max-width: 767px) {
+    .head {
+        font-size: 23px;
+    }
+
+    .containerLogin {
+        height: 100vh;
+        width: 100vw;
+    }
+
+    .formContainer {
+        width: 76vw;
+        margin: auto;
+    }
+
+    .innerformLogin {
+        width: 78%;
+        margin-left: 0;
+    }
+
+    .formField {
+        width: 15rem;
+    }
+
+    .btnHome {
+        bottom: 1rem;
+        right: 2rem;
+    }
+    .heroImage{
+        display: none;
+    }
+    .dontHave{
+        margin-top: 0.5rem;
+        font-size: 14px;
+       }
+}

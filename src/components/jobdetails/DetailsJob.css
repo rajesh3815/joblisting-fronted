@@ -64,6 +64,8 @@
     background-color: white;
     border-radius: 2rem 2rem 0 0;
     box-shadow: 0px 4px 23px 2px #0000001A;
+    position: sticky;
+    top: 0;
 }
 
 .jd__details {
@@ -74,7 +76,6 @@
     border-radius: 0 0 2rem 2rem;
     display: flex;
     flex-direction: column;
-    /* align-items: start; */
     padding: 2rem 3rem;
     box-sizing: border-box;
     box-shadow: 0px 4px 23px 2px #0000001A;
@@ -134,15 +135,52 @@
     margin-top: -9px;
 }
 
-.navbar button{
+.navbar button {
     transition: all 0.3s;
-  }
-  .navbar button:hover {
+}
+
+.navbar button:hover {
     box-shadow: 0px 15px 25px -5px rgba(darken(rgb(252, 150, 119), 40%));
     background-color: #f02727;
     transform: scale(1.03);
-  }
-  .navbar button:active {
+}
+
+.navbar button:active {
     box-shadow: 0px 4px 8px rgba(darken(rgb(255, 146, 106), 30%));
     transform: scale(0.98);
-  }
+}
+
+/* ------------//////////////////////////////////////mediaquery started from here //////////////////////////////////////////////----------- */
+@media only screen and (max-width: 767px) {
+
+    .navbar__inner {
+        gap: 1rem;
+    }
+
+    .require--skill {
+        flex-wrap: wrap;
+    }
+
+    .navbar__logo {
+        font-size: 1.4rem;
+    }
+
+    .navbar button {
+        padding: 3px;
+        height: 2.2rem;
+        font-size: 1rem;
+        width: max-content;
+    }
+
+    .jobdetails--heading {
+        width: 93vw;
+        height: max-content;
+        padding: 0.5rem;
+        font-size: 1.3rem;
+    }
+    .jd__details{
+        margin-top: 1.5rem;
+        width: 97vw;
+        padding: 2rem 1.1rem;
+    }
+}
